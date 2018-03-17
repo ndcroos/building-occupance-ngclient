@@ -1,0 +1,21 @@
+<p>
+  add-inhabitant works!
+</p>
+
+<form name="$ctrl.myForm" ng-submit="$ctrl.submit()">
+  <input id="txtStartDate" name="txtStartDate" required="" ng-model="$ctrl.startDate" type="text">
+  <div class="error" ng-messages="$ctrl.myForm.txtStartDate.$error">
+      <span ng-message="required">
+          Naam
+      </span>
+   </div>
+   <button type="button" ng-click="$ctrl.cancel()">Leeg</button>
+   <button type="submit">Submit</button>
+</form>
+
+<div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+</div>
