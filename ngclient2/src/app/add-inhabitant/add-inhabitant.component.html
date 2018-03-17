@@ -1,7 +1,5 @@
-<p>
-  add-inhabitant works!
-</p>
 
+<div>
 <form name="$ctrl.myForm" ng-submit="$ctrl.submit()">
   <input id="txtStartDate" name="txtStartDate" required="" ng-model="$ctrl.startDate" type="text">
   <div class="error" ng-messages="$ctrl.myForm.txtStartDate.$error">
@@ -9,13 +7,21 @@
           Naam
       </span>
    </div>
-   <button type="button" ng-click="$ctrl.cancel()">Leeg</button>
+   
+    <!-- -->
+    <div class="form-group">
+        <label for="file">Kies een foto.</label>
+        <input type="file" id="file" required (change)="handleFileInput($event.target.files)">
+        
+        <div [hidden]="photo.valid" class="alert alert-danger">
+        Foto is verplicht.
+        </div>
+    </div>
+    
    <button type="submit">Submit</button>
+   
+   
+   
+   
 </form>
-
-<div class="form-group">
-    <label for="file">Choose File</label>
-    <input type="file"
-           id="file"
-           (change)="handleFileInput($event.target.files)">
 </div>

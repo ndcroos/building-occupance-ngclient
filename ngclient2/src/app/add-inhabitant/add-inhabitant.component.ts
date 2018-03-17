@@ -11,9 +11,11 @@ export class AddInhabitantComponent implements OnInit {
     
     // Variable for selected photo.
     fileToUpload: File = null;
+    
+    //
     fileUploadService : FileUploadService;
 
-  constructor() { }
+    constructor() { }
 
     ngOnInit() {
     
@@ -24,6 +26,7 @@ export class AddInhabitantComponent implements OnInit {
         this.fileToUpload = files.item(0);
     }
     
+    //
     uploadFileToActivity() {
         this.fileUploadService.postFile(this.fileToUpload).subscribe(data => {
           // do something, if upload success

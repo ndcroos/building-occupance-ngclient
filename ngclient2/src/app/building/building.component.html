@@ -1,0 +1,11 @@
+<!-- semantic UI item class
+
+-->
+<div class="ui items">
+    <room-row
+        *ngFor="let myRoom of roomList"
+        [room]="myRoom"
+        (click)='clicked(myRoom)'
+        [class.selected]="isSelected(myRoom)">
+    </room-row>
+</div>

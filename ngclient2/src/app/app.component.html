@@ -13,6 +13,15 @@
 </div>
 </div>
 
+
+<div class="inventory-app">
+<app-building
+[roomList]="building"
+(onRoomSelected)="RoomWasSelected($event)">
+</app-building>
+</div>
+
+
 <h1>Draggable</h1>
 
 <h2>Part 1 - draggable directive</h2>
