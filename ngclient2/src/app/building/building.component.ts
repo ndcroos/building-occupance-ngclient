@@ -46,7 +46,7 @@ export class BuildingComponent implements OnInit {
       if (!room || !this.currentRoom) {
           return false;
       }
-    return room.sku === this.currentRoom.sku;
+    return room.id === this.currentRoom.id;
   }
   
 }

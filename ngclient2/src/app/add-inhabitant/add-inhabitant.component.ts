@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FileUploadService } from '../file-upload.service';
 
@@ -34,5 +36,15 @@ export class AddInhabitantComponent implements OnInit {
                 console.log(error);
             });
     }
+    
+    
+    /*
+    let inhabitantInfo = new FormGroup({
+        firstName: new FormControl("");
+        firstName: new FormControl("");
+        photo: new FormControl("");
+    })
+    
+    */
 
 }
